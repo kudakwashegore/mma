@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>My Messaging App</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <span class="logo">MM<sup>a</sup></span>
+            <nav>
+                <ul>
+                    <li class="active"><a id="contacts-link" href="">Contacts</a></li>
+                    <li><a href="">Messages</a></li>
+                    <li><a href="">Settings</a></li>
+                </ul>
+            </nav>
+        </div>        
+    </header>
+
+    <section id="content">
+      
+      <section id="contacts">
+        <div id="contacts-container" class="container">
+        </div>
+      </section>
+
+      <section id="contact" class="hidden">
+        <div id="contact-header" class="contact-header">
+            <img id="contact-image">
+        </div>
+        <div class="contact-body">
+            <div class="container">
+                <h2 id="contact-name"></h2>
+                <strong id="contact-email"></strong>
+            </div>
+        </div>
+      </section>
+
+      <span class="add-btn">+</span>
+
+    </section>
+
+    <footer>
+        <p>&copy; Copyright 2020. My Messaging App</p>
+    </footer>
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>
