@@ -12,26 +12,33 @@
 
 export default class HtmlBuilder{
   static buildListContact(contact) {
-    const em = document.createElement("em");
-    const h3 = document.createElement("h3");
-    const summaryDiv = document.createElement("div");
-    const span = document.createElement("span");
-    const img = document.createElement("img");
+    // const em = document.createElement("em");
+    // const h3 = document.createElement("h3");
+    // const summaryDiv = document.createElement("div");
+    // const span = document.createElement("span");
+    // const img = document.createElement("img");
     const contactDiv = document.createElement("div");
 
-    em.innerText = contact.email;
-    h3.innerText = `${contact.first_name} ${contact.last_name}`;
-    img.src = contact.avatar;
+    // em.innerText = contact.email;
+    // h3.innerText = `${contact.first_name} ${contact.last_name}`;
+    // img.src = contact.avatar;
 
-    summaryDiv.appendChild(h3);
-    summaryDiv.appendChild(em);
-    span.appendChild(img)
-    contactDiv.appendChild(span);
-    contactDiv.appendChild(summaryDiv)
+    // summaryDiv.appendChild(h3);
+    // summaryDiv.appendChild(em);
+    // span.appendChild(img)
+    // contactDiv.appendChild(span);
+    // contactDiv.appendChild(summaryDiv)
 
-    summaryDiv.classList.add("summary");
+    // summaryDiv.classList.add("summary");
     contactDiv.classList.add("contact");
 
+    const innerHtml = `<span><img src="${contact.avatar}" /></span>
+    <div class="summary">
+        <h3>${contact.first_name} ${contact.last_name}</h3>
+        <em>${contact.email}</em>
+    </div>`;
+
+    contactDiv.innerHTML = innerHtml;
     return contactDiv;
   }
 
